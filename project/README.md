@@ -81,6 +81,3 @@ Quill is a full-stack application featuring a React Native (Expo) frontend, a Py
 5. Open a Pull Request
 
 ---
-
-## License
-[MIT](LICENSE) (or specify your license here) 
