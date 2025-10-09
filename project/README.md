@@ -1,83 +1,121 @@
-# Quill
+# Quill - AI-Powered Learning Platform
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![React Native](https://img.shields.io/badge/React_Native-0.70+-61DAFB.svg)](https://reactnative.dev/)
 
 ## Project Overview
-Quill is a full-stack application featuring a React Native (Expo) frontend, a Python backend, and Android support. It provides features such as authentication, onboarding, chat, book management, and more.
 
----
+Quill is an intelligent learning platform that combines the power of AI with an intuitive mobile interface. Built with React Native (Expo) and Python, it offers a seamless experience for document analysis, interactive learning, and knowledge sharing.
 
-## Table of Contents
-- [Features](#features)
-- [Setup](#setup)
-  - [Frontend (Expo)](#frontend-expo)
-  - [Backend (Python)](#backend-python)
-  - [Android](#android)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+## Key Features
 
----
+### Core Features
 
-## Features
-- User authentication (login, signup, OTP verification, password reset)
-- Onboarding flow
-- Chat functionality
-- Book management (view, upload, preview)
-- Profile, settings, notifications, help
-- Responsive UI for mobile and Android
+- **Document Intelligence**: Upload, analyze, and interact with PDF documents
+- **Smart Chat**: Context-aware conversations with AI assistance
+- **User Management**: Secure authentication with OTP verification
+- **Real-time Updates**: WebSocket-based live interactions
+- **Cross-platform**: Works on iOS, Android, and web
 
----
+### Technical Stack
 
-## Setup
+- **Frontend**: React Native (Expo) with TypeScript
+- **Backend**: FastAPI (Python 3.8+)
+- **Database**: PostgreSQL with SQLAlchemy ORM
+- **Real-time**: WebSocket support
+- **AI/ML**: Advanced document processing and analysis
 
-### Frontend (Expo)
-1. Install dependencies:
+## Getting Started
+
+### Prerequisites
+
+- Node.js 16+ & npm/yarn
+- Python 3.8+
+- Expo CLI (`npm install -g expo-cli`)
+- PostgreSQL 12+
+- Redis (for real-time features)
+
+### Installation
+
+1. **Clone the repository**
    ```bash
-   npm install
-   # or
-   yarn install
-   ```
-2. Start the Expo development server:
-   ```bash
-   npx expo start
+   git clone https://github.com/your-username/quill.git
+   cd quill
    ```
 
-### Backend (Python)
-1. Navigate to the backend directory:
+2. **Backend Setup**
    ```bash
    cd backend
-   ```
-2. (Recommended) Create and activate a virtual environment:
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
-   ```
-3. Install dependencies:
-   ```bash
+   python -m venv venv
+   source venv/bin/activate  # Windows: .\venv\Scripts\activate
    pip install -r requirements.txt
    ```
-4. Start the backend server:
+
+3. **Frontend Setup**
    ```bash
-   python main.py
+   cd ../frontend
+   npm install
+   # or
+   yarn
    ```
 
+### Configuration
+
+1. **Backend** (`backend/.env`)
+   ```env
+   DATABASE_URL=postgresql://user:password@localhost:5432/quill
+   SECRET_KEY=your-secret-key
+   REDIS_URL=redis://localhost:6379
+   ```
+
+2. **Frontend** (`frontend/.env`)
+   ```env
+   EXPO_PUBLIC_API_URL=http://localhost:8000
+   EXPO_PUBLIC_WS_URL=ws://localhost:8000/ws
+   ```
+
+## Running the Application
+
+### Start Backend
+```bash
+cd backend
+uvicorn main:app --reload
+```
+
+### Start Frontend
+```bash
+cd frontend
+expo start
+```
+
+## Mobile App
+
 ### Android
-- To run on Android, use Expo Go or build a native APK via EAS or Android Studio.
-- Place your debug keystore in `android/app/debug.keystore` (do not commit this file).
 
----
+- Use Expo Go app for development
+- For production, build with EAS or Android Studio
+- Place debug keystore in `android/app/debug.keystore`
 
-## Usage
-- Access the app via Expo Go or a simulator/emulator.
-- The backend API runs on the specified port (default: 8000).
-- Update environment variables as needed in `.env` files (not committed).
+### iOS
 
----
+- Requires macOS with Xcode
+- Use Expo Go or build with EAS
 
 ## Contributing
+
+We welcome contributions! Please follow these steps:
+
 1. Fork the repository
-2. Create a new branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature/your-feature`)
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ---
+
+Built with ❤️ by the Quill Team
