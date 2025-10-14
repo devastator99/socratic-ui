@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Quill is an intelligent learning platform that combines the power of AI with an intuitive mobile interface. Built with React Native (Expo) and Python, it offers a seamless experience for document analysis, interactive learning, and knowledge sharing.
+Quill is an intelligent learning platform that combines the power of AI with an intuitive mobile interface. Built with React Native (Expo) for the frontend and Python for the backend, it offers a seamless experience for document analysis, interactive learning, and knowledge sharing.
 
 ## Key Features
 
