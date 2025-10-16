@@ -27,7 +27,7 @@ Quill is an intelligent learning platform that combines the power of AI with an 
 ### Prerequisites
 
 - Node.js & npm
-- Python 3.8+
+- Python 3.x
 - Expo CLI (`npm install -g expo-cli`)
 - PostgreSQL 12+
 - Redis (for real-time features)
