@@ -18,7 +18,7 @@ Quill is an intelligent learning platform that combines the power of AI with an 
 
 - **Frontend**: React Native (Expo) with TypeScript
 - **Backend**: FastAPI 
-- **Database**: PostgreSQL with SQLAlchemy ORM
+- **Database**: PostgreSQL 
 - **Real-time**: WebSocket support
 - **AI/ML**: Advanced document processing and analysis
 
